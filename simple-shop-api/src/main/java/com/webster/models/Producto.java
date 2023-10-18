@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String descripcion;
     private String unidadMedida;
     private BigDecimal precio;
