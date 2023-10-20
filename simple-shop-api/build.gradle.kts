@@ -24,6 +24,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web:3.1.4")
     implementation("org.flywaydb:flyway-mysql:9.22.3")
 
+    implementation("org.modelmapper:modelmapper:3.2.0")
+
     runtimeOnly("org.mariadb.jdbc:mariadb-java-client:3.2.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test:3.1.4")
