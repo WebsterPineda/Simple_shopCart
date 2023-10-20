@@ -1,0 +1,9 @@
+<h2>Clients</h2>
+<ul>
+  <li *ngFor="let client of clients">
+    {{ client.nombre }} {{ client.apellido }}
+    <button (click)="viewDetails(client)">View Details</button>
+    <button (click)="editClient(client)">Edit</button>
+    <button (click)="deleteClient(client)">Delete</button>
+  </li>
+</ul>
