@@ -1,0 +1,48 @@
+<h1 mat-dialog-title>
+  {{ refClient !== null ? "Editar " : "Crear " }} Usuario
+</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <p>
+      <mat-form-field>
+        <input
+          type="text"
+          formControlName="nombre"
+          matInput
+          placeholder="Name"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input
+          type="text"
+          formControlName="apellido"
+          matInput
+          placeholder="Apellido"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input
+          type="text"
+          formControlName="direccion"
+          matInput
+          placeholder="Direccion"
+        />
+      </mat-form-field>
+    </p>
+    <div>
+      <button mat-button mat-raised-button mat-dialog-close>Cancelar</button>
+      <button
+        type="submit"
+        [disabled]="!form.valid"
+        mat-raised-button
+        color="primary"
+      >
+        {{ refClient !== null ? "Actualizar" : "Registrar" }}
+      </button>
+    </div>
+  </form>
+</div>

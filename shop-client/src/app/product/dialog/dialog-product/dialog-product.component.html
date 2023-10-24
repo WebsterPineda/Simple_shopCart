@@ -1,0 +1,55 @@
+<h1 mat-dialog-title>{{ isUpdate ? "Actualizar" : "Crear" }}&nbsp;Producto</h1>
+<mat-dialog-content>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div>
+      <mat-form-field floatLabel="auto">
+        <mat-label>Descripcion</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Descripcion"
+          required=""
+          formControlName="descripcion"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field floatLabel="auto">
+        <mat-label>Unidad de Medida</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Unidad"
+          required=""
+          formControlName="unidadMedida"
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field floatLabel="auto">
+        <mat-label>Precio</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Precio"
+          required=""
+          formControlName="precio"
+          min="0"
+        />
+        <mat-hint>Price must be greater or equal than 0</mat-hint>
+        <span matTextPrefix>$&nbsp;</span>
+      </mat-form-field>
+    </div>
+    <div>
+      <button
+        type="submit"
+        [disabled]="!form.valid"
+        mat-raised-button
+        color="primary"
+      >
+        Enviar</button
+      >&nbsp;
+      <button type="button" mat-raised-button mat-dialog-close>Cancelar</button>
+    </div>
+  </form>
+</mat-dialog-content>
