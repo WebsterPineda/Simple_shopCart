@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Visualizar Cliente</h1>
+<div mat-dialog-content>
+  <form [formGroup]="frm">
+    <p>
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input type="text" formControlName="nombre" matInput readonly />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Apellido</mat-label>
+        <input type="text" formControlName="apellido" matInput readonly />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Direccion</mat-label>
+        <input type="text" formControlName="direccion" matInput readonly
+      /></mat-form-field>
+    </p>
+  </form>
+</div>
